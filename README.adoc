@@ -1,0 +1,17 @@
+= Neo4j Procedure for HYPHE
+
+== Building
+
+This project uses maven, to build a jar-file with the procedure in this
+project, simply package the project with maven:
+
+    mvn clean package
+
+This will produce a jar-file,`target/hyphe-procedure-1.0.0-SNAPSHOT.jar`,
+that can be deployed in the `plugin` directory of your Neo4j instance.
+
+== Query
+
+---
+CALL hyphe.traverse(sourceNode) YIELD node
+---
